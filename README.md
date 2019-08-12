@@ -1,7 +1,7 @@
 #### About?
-A Flask based API to detect ground points in a given LiDAR data file that I wrote during my time at [Playment](https://playment.io/)
+A Flask based API to detect ground points in a given LiDAR data file that I wrote during my super-cool internship (Summers, 2019) at [Playment](https://playment.io/)
 
-Here is how the magical output looks like (JK):
+Here is how the magical output looks like:
 
 ![alt text](https://github.com/lavishsaluja/Ground-Detection/blob/master/segmented_ground.png)
 
@@ -14,12 +14,10 @@ Here is how the magical output looks like (JK):
 
 
 #### setting it up?
-1. Clone the repository.
-2. cd Ground-Detection
-3. Enter your AWS KEYS in `functions.py`
-4. Install all the dependencies.
-5. run `python app.py`
-6. visit `0.0.0.0:5000/segmentation?url = YOUR_URL&threshold=YOUR_THRESHOLD` on your browser.
+1. Enter your AWS KEYS in `functions.py`
+2. Install all the dependencies.
+3. run `python app.py`
+4. visit `0.0.0.0:5000/segmentation?url=YOUR_URL&threshold=YOUR_THRESHOLD` on your browser.
 
 
 #### License
