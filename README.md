@@ -5,10 +5,22 @@ Here is how the magical output looks like (JK):
 
 ![alt text](https://github.com/lavishsaluja/Ground-Detection/blob/master/segmented_ground.png)
 
+
 #### To-do
-- [ ] Remove the dependency of AWS and write function to parse local pcd file and create new pcd on local.
+- [ ] Write function to parse local pcd file and create new pcd on local along with doing it on AWS.
 - [ ] Add a requirements.txt file with all the necessary packages so as to ease the setting-up time of project
+- [ ] Add "how to setup & run" section.
 - [ ] Add more To-dos (Lol!)
+
+
+#### setting it up?
+1. Clone the repository.
+2. cd Ground-Detection
+3. Enter your AWS KEYS in `functions.py`
+4. Install all the dependencies.
+5. run `python app.py`
+6. visit `0.0.0.0:5000/segmentation?url = YOUR_URL&threshold=YOUR_THRESHOLD` on your browser.
+
 
 #### License
 MIT License
