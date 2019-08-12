@@ -1,5 +1,8 @@
 #### About?
 A Flask based API to detect ground points in a given LiDAR data file that I wrote during my time at [Playment](https://playment.io/)
+
+Here is how the magical output looks like (JK):
+
 ![alt text](https://github.com/lavishsaluja/Ground-Detection/blob/master/segmented_ground.png)
 
 #### To-do
