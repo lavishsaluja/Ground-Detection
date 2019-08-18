@@ -179,6 +179,8 @@ def PrevFunction(url, THRESHOLD):
 	points = ground_points + non_ground_points
 	sensor_url = getSensor_url(points, DESTPATH)
 	return sensor_url
+
+
 def getGround_World(points, THRESHOLD):
 	'''
 	filter ground and non_ground points
