@@ -88,37 +88,6 @@ def parse_url(url):
         raise RuntimeError('Only .bin/.pcd file formats are parsed.')
 
 
-def getGround_World(points, THRESHOLD):
-    '''
-    filter ground and non_ground points
-    :param points array
-    :param threshold value (varies between 0.1 to 0.3 generally)
-    '''
-    xyz = points
-    height_col = int(np.argmin(np.var(xyz, axis = 0)))
-    
-    temp = np.zeros((len(xyz[:,1]),4), dtype= float)
-    temp[:,:3] = xyz[:,:3]
-    temp[:,3] = np.arange(len(xyz[:,1]))
-    xyz = temp
-    z_filter = xyz[(xyz[:,height_col]< np.mean(xyz[:,height_col]) + 1.5*np.std(xyz[:,height_col])) & (xyz[:,height_col]> np.mean(xyz[:,height_col]) - 1.5*np.std(xyz[:,height_col]))]
-    
-    max_z, min_z = np.max(z_filter[:,height_col]), np.min(z_filter[:,height_col])
-    z_filter[:,height_col] = (z_filter[:,height_col] - min_z)/(max_z - min_z) 
-    iter_cycle = 10
-    for i in range(iter_cycle):   
-        covariance = np.cov(z_filter[:,:3].T)
-        w,v,h = np.linalg.svd(np.matrix(covariance))
-        normal_vector = w[np.argmin(v)]
-        filter_mask = np.asarray(np.abs(np.matrix(normal_vector)*np.matrix(z_filter[:,:3]).T )<THRESHOLD)
-        z_filter = np.asarray([z_filter[index[1]] for index,a in np.ndenumerate(filter_mask) if a == True])
-
-    z_filter[:,height_col] = z_filter[:,height_col]*(max_z - min_z) + min_z
-    world = np.array([row for row in xyz if row[3] not in z_filter[:,3]])
-    
-    return z_filter, world
-
-
 def getName(url):
     '''
     return the name of file with segmented ground on S3 
