@@ -10,7 +10,6 @@ Here is how the magical output looks like:
 - [ ] Write function to parse local pcd file and create new pcd on local along with doing it on AWS.
 - [ ] Add a requirements.txt file with all the necessary packages so as to ease the setting-up time of project
 - [x] Add "how to setup & run" section.
-- [ ] Add more To-dos (Lol!)
 
 
 #### setting it up?
