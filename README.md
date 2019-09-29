@@ -12,11 +12,12 @@ Here is how the magical output looks like:
 - [x] Add "how to setup & run" section.
 
 
-#### setting it up?
+#### Setting it up
 1. Enter your AWS KEYS in `functions.py`
 2. Install all the dependencies.
 3. run `python app.py`
 4. visit `0.0.0.0:5000/segmentation?url=YOUR_URL&threshold=YOUR_THRESHOLD` on your browser.
 
 
-[LICENSE](https://github.com/lavishsaluja/Ground-Detection/blob/master/LICENSE)
+#### License
+[MIT LICENSE](https://github.com/lavishsaluja/Ground-Detection/blob/master/LICENSE)
